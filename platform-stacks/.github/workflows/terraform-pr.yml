@@ -17,8 +17,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: examples/dev
-
+        working-directory: ./modules/governance/resource-groups/tests/rg-module
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
