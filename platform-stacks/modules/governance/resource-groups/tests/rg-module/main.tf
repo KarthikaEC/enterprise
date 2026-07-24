@@ -1,6 +1,6 @@
 module "resource_groups" {
 
-  source = "../../modules/governance/resource-groups"
+  source = "../../.."
 
   workload          = "payments"
   environment       = "dev"
