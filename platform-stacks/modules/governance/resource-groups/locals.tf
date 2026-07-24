@@ -16,7 +16,7 @@ locals {
 
   }
   
-  locals {
+
 
   mandatory_tags = {
 
@@ -27,12 +27,11 @@ locals {
     data_classification = var.data_classification
     managed_by          = "Terraform"
     workload            = var.workload_name
-    region              = local.region_tag
+    region              = var.location
 
   }
 
   tags = merge(local.mandatory_tags, var.additional_tags)
 
-}
 
 }
