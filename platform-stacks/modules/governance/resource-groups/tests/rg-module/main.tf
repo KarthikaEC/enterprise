@@ -2,14 +2,14 @@ module "resource_groups" {
 
   source = "../../.."
 
-  workload          = "payments"
-  environment       = "dev"
-  location          = "uksouth"
+  workload_name        = "payments"
+  environment          = "dev"
+  location             = "uksouth"
 
-  tags = {
-    Environment    = "Dev"
-    Owner          = "Platform"
-    CostCentre     = "12345"
-    Classification = "Internal"
+  additional_tags = {
+    environment          = "Dev"
+    owner                = "Platform"
+    cost_centre          = "12345"
+    data_classification  = "Internal"
   }
 }
