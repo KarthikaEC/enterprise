@@ -25,7 +25,7 @@ locals {
     owner               = var.owner_email
     cost_centre         = var.cost_centre
     data_classification = var.data_classification
-    managed_by          = "terraform"
+    managed_by          = "Terraform"
     workload            = var.workload_name
     region              = local.region_tag
 
