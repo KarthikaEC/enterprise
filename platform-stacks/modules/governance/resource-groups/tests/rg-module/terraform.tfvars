@@ -1,4 +1,4 @@
-workload = "payments"
+workload_name = "payments"
 
 environment = "dev"
 
