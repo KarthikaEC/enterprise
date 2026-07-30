@@ -28,3 +28,17 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "subnets" {
+  type = map(object({
+    cidr = string
+
+    delegation = optional(object({
+      name         = string
+      service_name = string
+      actions      = optional(list(string), [])
+    }))
+
+    pe_policy = optional(string, "Enabled")
+  }))
+}
