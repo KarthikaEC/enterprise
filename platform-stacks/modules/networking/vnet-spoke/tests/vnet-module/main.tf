@@ -11,22 +11,3 @@ module "vnet_spoke" {
 
   tags = var.tags
 }
-
-subnets = {
-  web = {
-    cidr = "10.20.1.0/24"
-  }
-
-  app = {
-    cidr = "10.20.2.0/24"
-  }
-
-  data = {
-    cidr = "10.20.3.0/24"
-  }
-
-  pe = {
-    cidr      = "10.20.4.0/24"
-    pe_policy = "NetworkSecurityGroupEnabled"
-  }
-}
