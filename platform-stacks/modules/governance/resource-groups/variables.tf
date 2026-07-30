@@ -1,25 +1,33 @@
-variable "workload" {
-  description = "Workload/Application short name"
-  type        = string
+variable "environment" {
+  type = string
 }
 
-variable "environment" {
-  description = "Environment name"
-  type        = string
+variable "project_name" {
+  type = string
+}
+
+variable "owner_email" {
+  type = string
+}
+
+variable "cost_centre" {
+  type = string
+}
+
+variable "data_classification" {
+  type = string
+}
+
+variable "workload_name" {
+  type = string
 }
 
 variable "location" {
-  description = "Azure region"
-  type        = string
+  type = string
 }
 
-variable "tags" {
-  description = "Mandatory tag set"
-  type        = map(string)
+variable "additional_tags" {
+  type    = map(string)
+  default = {}
 }
 
-variable "enable_prod_locks" {
-  description = "Enable RG locks for production"
-  type        = bool
-  default     = false
-}
