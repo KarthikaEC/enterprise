@@ -1,18 +1,40 @@
-variable "environment" {
-  type = string
+variable "workload_name" {
+  description = "Name of the workload."
+  type        = string
 }
 
-
-variable "workload_name" {
-  type = string
+variable "environment" {
+  description = "Deployment environment."
+  type        = string
 }
 
 variable "location" {
-  type = string
+  description = "Azure region."
+  type        = string
+}
+
+variable "project_name" {
+  description = "Project name."
+  type        = string
+}
+
+variable "owner_email" {
+  description = "Owner email address."
+  type        = string
+}
+
+variable "cost_centre" {
+  description = "Cost centre."
+  type        = string
+}
+
+variable "data_classification" {
+  description = "Data classification."
+  type        = string
 }
 
 variable "additional_tags" {
-  type    = map(string)
-  default = {}
+  description = "Additional tags to apply."
+  type        = map(string)
+  default     = {}
 }
-

@@ -1,15 +1,12 @@
 module "resource_groups" {
   source = "../.."
 
-  workload_name       = "payments"
-  environment         = "dev"
-  location            = "uksouth"
-  project_name        = "landing-zone"
-  owner_email         = "platform@company.com"
-  cost_centre         = "12345"
-  data_classification = "standard"
-
-  additional_tags = {
-    application = "payments-api"
-  }
+  workload_name       = var.workload_name
+  environment         = var.environment
+  location            = var.location
+  project_name        = var.project_name
+  owner_email         = var.owner_email
+  cost_centre         = var.cost_centre
+  data_classification = var.data_classification
+  additional_tags     = var.additional_tags
 }
